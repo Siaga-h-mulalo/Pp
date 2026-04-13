@@ -3,21 +3,21 @@ const projectsData = [
     { 
         title: "Kha Ri Gude", 
         desc: "Kha Ri Gude is an educational web application inspired by the importance of literacy and learning. The platform is designed to promote access to knowledge through a simple, user-friendly interface. It demonstrates strong foundational skills in web development, with a focus on clarity, accessibility, and meaningful content delivery. This project reflects a passion for using technology to support education and community development.", 
-        tech: ["HTML/CSS/JS"], 
+        tech: ["HTML" , "CSS" ,"JS"], 
         url: "https://25002460.github.io/Up-We-Go-/", 
         img: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=240&fit=crop" 
     },
     { 
         title: "Dragon PicStore", 
         desc: "Dragon PicStore is a visually driven web platform designed for browsing and showcasing images in an organized and engaging way. It highlights front-end development skills such as layout structuring, responsive design, and user experience optimization. The project demonstrates the ability to manage and present media content effectively while maintaining a clean and modern interface.", 
-        tech: ["HTML/CSS/JS"], 
+        tech: ["HTML" ,"CSS" , "JS"], 
         url: "https://siaga-h-mulalo.github.io/SMH/", 
         img: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&h=240&fit=crop" 
     },
     { 
         title: "Dragon Tactics", 
         desc: "Dragon Tactics is a strategy-based game project that showcases creativity, logic building, and interactive design. The application focuses on tactical gameplay concepts, allowing users to engage with structured decision-making elements. It reflects strong problem-solving skills and serves as a foundation toward more advanced game development projects, aligning with long-term goals in building engaging and dynamic games.", 
-        tech: ["JS", "Game Design"], 
+        tech: ["JS","H TML" , "CSS"], 
         url: "https://siaga-h-mulalo.github.io/DT/", 
         img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=240&fit=crop" 
     }
