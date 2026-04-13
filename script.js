@@ -17,7 +17,7 @@ const projectsData = [
     { 
         title: "Dragon Tactics", 
         desc: "Dragon Tactics is a strategy-based game project that showcases creativity, logic building, and interactive design. The application focuses on tactical gameplay concepts, allowing users to engage with structured decision-making elements. It reflects strong problem-solving skills and serves as a foundation toward more advanced game development projects, aligning with long-term goals in building engaging and dynamic games.", 
-        tech: ["JS","H TML" , "CSS"], 
+        tech: ["JS","HTML" , "CSS"], 
         url: "https://siaga-h-mulalo.github.io/DT/", 
         img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=600&h=240&fit=crop" 
     }
