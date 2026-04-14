@@ -30,7 +30,7 @@ body.dark {
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; cursor: none; }
+html { scroll-behavior: smooth; cursor: none; } /* Hide default cursor if custom is active */
 
 body { 
     background: var(--bg); 
@@ -42,6 +42,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* Fallback cursor for mobile/coarse pointers */
 @media (pointer: coarse) { html { cursor: auto; } }
 
 /* ================= AMBIENT BACKGROUND ORBS ================= */
