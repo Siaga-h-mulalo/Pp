@@ -6,22 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Kha Ri Gude",
             desc: "An educational web application inspired by the importance of literacy. The platform is designed to promote access to knowledge through a simple, user-friendly interface.",
             tech: ["HTML", "CSS", "JS"],
-            url: "[https://25002460.github.io/Up-We-Go-/](https://25002460.github.io/Up-We-Go-/)",
-            img: "[https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=400&fit=crop](https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=400&fit=crop)"
+            url: "https://25002460.github.io/Up-We-Go-/",
+            img: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=400&fit=crop"
         },
         {
             title: "Dragon PicStore",
             desc: "A visually driven web platform designed for browsing and showcasing images. Highlights front-end development skills such as layout structuring and CSS Grid optimization.",
             tech: ["HTML", "CSS", "JS"],
-            url: "[https://siaga-h-mulalo.github.io/SMH/](https://siaga-h-mulalo.github.io/SMH/)",
-            img: "[https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&h=400&fit=crop](https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&h=400&fit=crop)"
+            url: "https://siaga-h-mulalo.github.io/SMH/",
+            img: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&h=400&fit=crop"
         },
         {
             title: "Dragon Tactics",
             desc: "A browser-based strategy game project that showcases logic building and interactive design. Allows users to engage with structured decision-making elements.",
             tech: ["JS", "HTML", "CSS"],
-            url: "[https://siaga-h-mulalo.github.io/DT/](https://siaga-h-mulalo.github.io/DT/)",
-            img: "[https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=400&fit=crop](https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=400&fit=crop)"
+            url: "https://siaga-h-mulalo.github.io/DT/",
+            img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=400&fit=crop"
         }
     ];
 
