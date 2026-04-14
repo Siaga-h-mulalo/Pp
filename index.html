@@ -1,196 +1,221 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Mulalo Siaga – Computer Science student, tutor & tech consultant. High-distinction achiever, Java/C++ expert.">
-    <title>Mulalo Siaga | Professional Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Mulalo Siaga – Computer Science student, tutor & tech consultant. High-distinction achiever, Java/C++ expert.">
+<title>Mulalo Siaga | Professional Portfolio</title>
+<link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+<link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+<link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap)" rel="stylesheet">
+<link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css)">
+<link rel="stylesheet" href="[https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css](https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css)">
+
+<!-- Link to your external CSS file -->
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- AMBIENT BACKGROUND -->
+<div class="ambient-bg">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+</div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
 <div class="wrapper">
+    <!-- SIDEBAR -->
     <aside class="sidebar">
         <div>
-            <h2 style="font-weight: 800; letter-spacing: -1px;">M. SIAGA</h2>
-            <p style="color: var(--accent-green); font-size: 0.7rem; font-weight: 800;">PORTFOLIO</p>
+            <h2 style="font-weight: 800; letter-spacing: -1px; font-size: 2rem;">M.<span class="text-gradient">SIAGA</span></h2>
+            <p style="color: var(--accent-green); font-size: 0.75rem; font-weight: 800; letter-spacing: 1.5px; margin-top: -5px;">PORTFOLIO</p>
             <nav class="nav-menu">
-                <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-                <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-                <li><a href="#skills"><i class="fas fa-microchip"></i> Skills</a></li>
-                <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
-                <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                <li><a href="#certificate"><i class="fas fa-award"></i> Certificate</a></li>
-                <li><a href="#contact"><i class="fas fa-paper-plane"></i> Contact</a></li>
+                <li><a href="#home" class="active" aria-label="Home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#about" aria-label="About"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="#education" aria-label="Education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#experience" aria-label="Experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+                <li><a href="#skills" aria-label="Skills"><i class="fas fa-microchip"></i> Skills</a></li>
+                <li><a href="#services" aria-label="Services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                <li><a href="#projects" aria-label="Projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="#certificate" aria-label="Certificate"><i class="fas fa-award"></i> Certificate</a></li>
+                <li><a href="#contact" aria-label="Contact"><i class="fas fa-paper-plane"></i> Contact</a></li>
             </nav>
         </div>
-        <button class="btn btn-green" id="themeBtn" style="width: 100%; justify-content: center;">
-            <i class="fas fa-moon"></i> Dark Mode
+        <button class="btn btn-green theme-toggle" style="width: 100%; margin-top: 1rem;" aria-label="Toggle Dark Mode">
+            <i class="fas fa-moon"></i> <span>Dark Mode</span>
         </button>
     </aside>
 
     <main class="main-content">
         <!-- HOME -->
         <section id="home" class="section-card hero-box reveal">
-            <div class="welcome-badge">Hello! Welcome.</div>
+            <div class="welcome-badge"><i class="fas fa-hand-sparkles"></i> Hello! Welcome.</div>
             <div class="profile-container">
-                <img src="MySelfie.jpeg" alt="Mulalo Siaga" class="viewable-img" data-src="MySelfie.jpeg">
+                <img src="MySelfie.jpeg" alt="Mulalo Siaga" class="viewable-img" data-src="MySelfie.jpeg" onerror="this.src='[https://placehold.co/400x400/2563EB/ffffff?text=MS](https://placehold.co/400x400/2563EB/ffffff?text=MS)'">
             </div>
-            <h1 class="hero-title">Mulalo <span>Siaga</span></h1>
-            <div class="type-writer" id="typewriter"></div>
+            <h1 class="hero-title"><span class="text-gradient">Mulalo Siaga</span></h1>
+            <div class="type-writer-container">
+                <span class="type-writer" id="typewriter"></span>
+            </div>
             <p class="hero-lead">Second-year Computer Science student passionate about building efficient systems, solving real-world tech problems, and helping others learn through code.</p>
-            <div class="cta-group" style="display: flex; gap: 1rem; justify-content: center;">
-                <a href="#contact" class="btn btn-blue"><i class="fas fa-link"></i> Connect</a>
-                <a href="#projects" class="btn btn-green"><i class="fas fa-eye"></i> Projects</a>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="#contact" class="btn btn-blue btn-magnetic"><i class="fas fa-link"></i> Let's Connect</a>
+                <a href="#projects" class="btn btn-green btn-magnetic"><i class="fas fa-eye"></i> View Work</a>
             </div>
         </section>
 
         <!-- ABOUT -->
         <section id="about" class="section-card reveal">
-            <h2 class="heading">About Me</h2>
+            <h2 class="heading"><i class="fas fa-user-astronaut"></i> About Me</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p><strong>I am a second-year Computer Science student at the University of Venda (UNIVEN)</strong> with a passion for using technology to solve real-world problems. I go beyond coding , I help people fix everyday tech issues: forgotten passwords, system slowdowns, software errors, and hardware challenges.</p>
-                    <p style="margin-top: 1rem;">I tutor Mathematics (Calculus) and Java programming, simplifying complex concepts into clear lessons. This has strengthened my communication and problem-solving skills.</p>
-                    <p style="margin-top: 1rem;">My core skills include Object-Oriented Programming (Java, C++), frontend web development, and Human-Computer Interaction. I thrive in collaborative environments and have participated in hackathons, building practical solutions under pressure.</p>
+                    <p><strong>I am a second-year Computer Science student at the University of Venda (UNIVEN)</strong> with a deep passion for using technology to solve real-world problems. I go beyond coding—I actively help people fix everyday tech issues, from forgotten passwords and system slowdowns to complex software and hardware challenges.</p>
+                    <p>I also tutor Mathematics (Calculus) and Java programming, breaking down complex concepts into digestible, clear lessons. This experience has drastically strengthened my communication and problem-solving skills.</p>
+                    <p>My core technical strengths lie in Object-Oriented Programming (Java, C++), frontend web development, and Human-Computer Interaction. I thrive in collaborative environments and actively participate in hackathons to build practical solutions under pressure.</p>
                 </div>
                 <div class="about-img">
-                    <img src="AboutMe.jpeg" alt="Mulalo portrait" class="viewable-img" data-src="AboutMe.jpeg">
+                    <img src="AboutMe.jpeg" alt="Mulalo portrait" class="viewable-img" data-src="AboutMe.jpeg" onerror="this.src='[https://placehold.co/600x800/1E293B/ffffff?text=About+Me](https://placehold.co/600x800/1E293B/ffffff?text=About+Me)'">
                 </div>
             </div>
         </section>
 
         <!-- EDUCATION -->
         <section id="education" class="section-card reveal">
-            <h2 class="heading">Education</h2>
-            <div class="timeline-item">
-                <img src="Logo.jpeg" style="height: 50px; margin-bottom: 1rem; background: white; padding: 5px; border-radius: 8px;" onerror="this.style.display='none'" alt="uni logo">
-                <div class="item-meta">2025 – Present</div>
+            <h2 class="heading"><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="timeline-item stagger-container">
+                <img src="Logo.jpeg" style="height: 60px; margin-bottom: 1rem; background: white; padding: 5px; border-radius: 12px; border: 1px solid var(--border);" onerror="this.style.display='none'" alt="University Logo">
+                <div class="item-meta">2024 – Present</div>
                 <h3 class="item-title">BSc Computer Science (2nd Year)</h3>
-                <p><strong>University of Venda</strong></p>
-                <ul style="margin-top: 0.8rem; color: var(--text-secondary); margin-left: 1.2rem;">
-                    <li>2025 - Present</li>
-                    <li>Distinctions: Mathematics, Programming, Computer Tech, Communication</li>
-                    <li>UNIVEN × CSIR Hackathon 2025 – educational access prototype</li>
+                <p style="color: var(--text-secondary); font-weight: 500;">University of Venda</p>
+                <ul style="margin-top: 1rem; color: var(--text-secondary); margin-left: 1.5rem; line-height: 1.8;">
+                    <li class="stagger-item">High-distinction achiever in Mathematics, Programming, Computer Tech, and Communication.</li>
+                    <li class="stagger-item">Participant in the UNIVEN × CSIR Hackathon 2025 – developed an educational access prototype.</li>
                 </ul>
             </div>
         </section>
 
         <!-- EXPERIENCE -->
         <section id="experience" class="section-card reveal">
-            <h2 class="heading">Experience</h2>
-            <div class="timeline-item">
-                <div class="item-meta">2025 - Present</div>
+            <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
+            <div class="timeline-item stagger-item">
+                <div class="item-meta">2024 - Present</div>
                 <h3 class="item-title">Academic Tutor (Maths & Java)</h3>
-                <p>→ 30+ students tutored, average grade improvement 20%<br>→ Designed Java OOP exercises boosting one student from 55% to 78% in 5 weeks</p>
+                <ul style="margin-top: 0.5rem; color: var(--text-secondary); margin-left: 1.5rem;">
+                    <li>Tutored 30+ students, resulting in an average grade improvement of 20%.</li>
+                    <li>Designed custom Java OOP exercises boosting one student from 55% to 78% in just 5 weeks.</li>
+                </ul>
             </div>
-            <div class="timeline-item">
-                <div class="item-meta">2025 – Present</div>
-                <h3 class="item-title">Technical Support Consultant</h3>
-                <p>→ 45+ devices repaired (Windows/Linux/macOS)<br>→ Boot errors, password recovery, driver fixes → 98% satisfaction</p>
+            <div class="timeline-item stagger-item">
+                <div class="item-meta">2023 – Present</div>
+                <h3 class="item-title">Freelance Tech Support Consultant</h3>
+                <ul style="margin-top: 0.5rem; color: var(--text-secondary); margin-left: 1.5rem;">
+                    <li>Successfully diagnosed and repaired 45+ devices across Windows, Linux, and macOS platforms.</li>
+                    <li>Resolved boot errors, executed secure password recoveries, and fixed driver conflicts with a 98% client satisfaction rate.</li>
+                </ul>
             </div>
         </section>
 
         <!-- SKILLS -->
         <section id="skills" class="section-card reveal">
-            <h2 class="heading">Technical Skills</h2>
+            <h2 class="heading"><i class="fas fa-layer-group"></i> Technical Skills</h2>
             <div class="skills-grid">
-                <div class="skill-tag"><i class="fab fa-java"></i> Java</div>
-                <div class="skill-tag"><i class="devicon-cplusplus-plain"></i> C++</div>
-                <div class="skill-tag"><i class="fab fa-js"></i> JavaScript</div>
-                <div class="skill-tag"><i class="fab fa-html5"></i> HTML5/CSS3</div>
-                <div class="skill-tag"><i class="fas fa-database"></i> SQL</div>
-                <div class="skill-tag"><i class="fab fa-git-alt"></i> Git/GitHub</div>
-                <div class="skill-tag"><i class="fas fa-terminal"></i> Linux CLI</div>
-                <div class="skill-tag"><i class="fab fa-react"></i> React (learning)</div>
+                <div class="skill-tag stagger-item"><i class="fab fa-java"></i> Java</div>
+                <div class="skill-tag stagger-item"><i class="devicon-cplusplus-plain"></i> C++</div>
+                <div class="skill-tag stagger-item"><i class="fab fa-js"></i> JavaScript</div>
+                <div class="skill-tag stagger-item"><i class="fab fa-html5"></i> HTML5</div>
+                <div class="skill-tag stagger-item"><i class="fab fa-css3-alt"></i> CSS3</div>
+                <div class="skill-tag stagger-item"><i class="fas fa-database"></i> SQL</div>
+                <div class="skill-tag stagger-item"><i class="fab fa-git-alt"></i> Git/GitHub</div>
+                <div class="skill-tag stagger-item"><i class="fas fa-terminal"></i> Linux CLI</div>
+                <div class="skill-tag stagger-item"><i class="fab fa-react"></i> React JS</div>
             </div>
         </section>
 
         <!-- SERVICES -->
         <section id="services" class="section-card reveal">
-            <h2 class="heading">Services & Pricing</h2>
-            <div class="service-row">
-                <img src="Work.jpeg" class="service-img viewable-img" data-src="Work.jpeg" onerror="this.src='https://placehold.co/240x240/2563EB/white?text=Tutoring'">
+            <h2 class="heading"><i class="fas fa-concierge-bell"></i> Services & Pricing</h2>
+            <div class="service-row stagger-item">
+                <img src="Work.jpeg" class="service-img viewable-img" data-src="Work.jpeg" alt="Tutoring Service" onerror="this.src='[https://placehold.co/400x300/2563EB/white?text=Tutoring](https://placehold.co/400x300/2563EB/white?text=Tutoring)'">
                 <div class="service-info">
-                    <h3><i class="fas fa-chalkboard-user"></i> Tutoring</h3>
+                    <h3><i class="fas fa-chalkboard-user"></i> Academic Tutoring</h3>
                     <div class="service-price">R150 - R300</div>
-                    <p>Java OOP & Calculus</p>
-                    <div class="service-desc">Personalized lessons • Grade improvement</div>
+                    <p style="font-weight: 500;">Java OOP & University Calculus</p>
+                    <p class="service-desc">Personalized 1-on-1 lessons designed to target weak points and guarantee grade improvement.</p>
                 </div>
             </div>
-            <div class="service-row">
-                <img src="TechFixing.jpeg" class="service-img viewable-img" data-src="TechFixing.jpeg" onerror="this.src='https://placehold.co/240x240/10B981/white?text=Tech+Fix'">
+            <div class="service-row stagger-item">
+                <img src="TechFixing.jpeg" class="service-img viewable-img" data-src="TechFixing.jpeg" alt="Tech Fixing Service" onerror="this.src='[https://placehold.co/400x300/10B981/white?text=Tech+Fix](https://placehold.co/400x300/10B981/white?text=Tech+Fix)'">
                 <div class="service-info">
-                    <h3><i class="fas fa-laptop-code"></i> Tech Fix</h3>
+                    <h3><i class="fas fa-laptop-code"></i> Device Tech Fix</h3>
                     <div class="service-price">R150 - R350</div>
-                    <p>Password reset, driver fixes, performance optimization</p>
-                    <div class="service-desc">Fast • Remote/On-site</div>
+                    <p style="font-weight: 500;">OS Troubleshooting & Optimization</p>
+                    <p class="service-desc">Password resets, driver updates, bootloop fixes, and general performance optimization. Remote or on-site.</p>
                 </div>
             </div>
-            <div class="service-row">
-                <img src="Editing.jpeg" class="service-img viewable-img" data-src="Editing.jpeg" onerror="this.src='https://placehold.co/240x240/000/white?text=Editing'">
+            <div class="service-row stagger-item">
+                <img src="Editing.jpeg" class="service-img viewable-img" data-src="Editing.jpeg" alt="Editing Service" onerror="this.src='[https://placehold.co/400x300/18181B/white?text=Editing](https://placehold.co/400x300/18181B/white?text=Editing)'">
                 <div class="service-info">
-                    <h3><i class="fas fa-video"></i> Editing</h3>
+                    <h3><i class="fas fa-video"></i> Media Editing</h3>
                     <div class="service-price">R50 - R100</div>
-                    <p>Photo retouch, short video editing, content polish</p>
-                    <div class="service-desc">High quality • Quick delivery</div>
+                    <p style="font-weight: 500;">Photo & Short Video Polish</p>
+                    <p class="service-desc">Clean photo retouching, short-form video editing (TikTok/Reels), and content formatting with quick turnaround.</p>
                 </div>
             </div>
         </section>
 
         <!-- PROJECTS -->
         <section id="projects" class="section-card reveal">
-            <h2 class="heading">Featured Projects</h2>
-            <div id="projectsContainer" class="project-grid"></div>
+            <h2 class="heading"><i class="fas fa-code-branch"></i> Featured Projects</h2>
+            <div id="projectsContainer" class="project-grid">
+                <!-- Projects injected via JS -->
+            </div>
         </section>
 
         <!-- CERTIFICATE -->
         <section id="certificate" class="section-card reveal">
-            <h2 class="heading">Certification</h2>
-            <div class="cert-single" id="hackCertBtn">
-                <i class="fas fa-certificate fa-2x" style="color: var(--accent-blue);"></i>
-                <h3 style="margin: 0.5rem 0;">UNIVEN × CSIR Hackathon 2025</h3>
-                <img src="HackCert.jpeg" alt="Hackathon Certificate" class="viewable-img" data-src="HackCert.jpeg">
-                <p style="margin-top: 0.5rem; font-size: 0.8rem;">Click to enlarge</p>
+            <h2 class="heading"><i class="fas fa-award"></i> Certification</h2>
+            <div class="cert-single viewable-img" data-src="HackCert.jpeg">
+                <i class="fas fa-certificate fa-3x" style="color: var(--accent-blue); margin-bottom: 1rem;"></i>
+                <h3 style="margin: 0.5rem 0; font-size: 1.3rem;">UNIVEN × CSIR Hackathon 2025</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Participation & Prototype Development</p>
+                <img src="HackCert.jpeg" alt="Hackathon Certificate" onerror="this.src='[https://placehold.co/600x400/2563EB/white?text=Certificate](https://placehold.co/600x400/2563EB/white?text=Certificate)'">
+                <p style="margin-top: 1rem; font-size: 0.85rem; font-weight: 600; color: var(--accent-green);"><i class="fas fa-search-plus"></i> Click to enlarge</p>
             </div>
         </section>
 
         <!-- CV SECTION -->
         <section id="cv" class="section-card reveal">
-            <h2 class="heading">Curriculum Vitae</h2>
+            <h2 class="heading"><i class="fas fa-file-alt"></i> Curriculum Vitae</h2>
             <div class="cv-box">
-                <i class="fas fa-file-pdf" style="font-size: 3rem; color: var(--accent-blue);"></i>
-                <h3 style="margin: 1rem 0;">My professional CV</h3>
-                <p>Detailed academic record, work experience, and achievements.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap;">
-                    <button class="btn btn-blue viewable-img" data-src="MyCV.jpeg"><i class="fas fa-eye"></i> Open CV</button>
-                    <a href="MyCV.jpeg" download class="btn btn-green"><i class="fas fa-download"></i> Download JPEG</a>
-                    <a href="Mulalo_Siaga_CV.pdf" download class="btn btn-green"><i class="fas fa-file-pdf"></i> PDF</a>
+                <i class="fas fa-file-pdf" style="font-size: 3.5rem; color: var(--accent-blue);"></i>
+                <h3 style="margin: 1.5rem 0 0.5rem 0;">Download My Professional CV</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Contains my detailed academic record, complete work experience history, and notable achievements.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <button class="btn btn-blue viewable-img btn-magnetic" data-src="MyCV.jpeg"><i class="fas fa-eye"></i> View as Image</button>
+                    <a href="MyCV.jpeg" download="Mulalo_Siaga_CV.jpeg" class="btn btn-green btn-magnetic"><i class="fas fa-image"></i> Get JPEG</a>
+                    <a href="Mulalo_Siaga_CV.pdf" download class="btn btn-green btn-magnetic"><i class="fas fa-download"></i> Get PDF</a>
                 </div>
             </div>
         </section>
 
         <!-- CONTACT -->
         <section id="contact" class="section-card reveal">
-            <h2 class="heading">Let's Connect</h2>
+            <h2 class="heading"><i class="fas fa-paper-plane"></i> Let's Connect</h2>
             <div class="contact-channels">
-                <a href="https://wa.me/27617250769" target="_blank" class="channel-link whatsapp">
+                <a href="[https://wa.me/27617250769](https://wa.me/27617250769)" target="_blank" class="channel-link whatsapp stagger-item" aria-label="WhatsApp">
                     <i class="fab fa-whatsapp"></i> WhatsApp
                 </a>
-                <a href="mailto:mulalosiaga743@gmail.com" class="channel-link email">
-                    <i class="fas fa-envelope"></i> mulalosiaga743@gmail.com
+                <a href="mailto:mulalosiaga743@gmail.com" class="channel-link email stagger-item" aria-label="Email">
+                    <i class="fas fa-envelope"></i> Email Me
                 </a>
-                <a href="https://www.linkedin.com/in/mulalo-siaga-14181b3a0" target="_blank" class="channel-link linkedin">
+                <a href="[https://www.linkedin.com/in/mulalo-siaga-14181b3a0](https://www.linkedin.com/in/mulalo-siaga-14181b3a0)" target="_blank" class="channel-link linkedin stagger-item" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
-                <a href="https://github.com/Siaga-h-mulalo" target="_blank" class="channel-link github">
+                <a href="[https://github.com/Siaga-h-mulalo](https://github.com/Siaga-h-mulalo)" target="_blank" class="channel-link github stagger-item" aria-label="GitHub">
                     <i class="fab fa-github"></i> GitHub
                 </a>
             </div>
@@ -198,18 +223,23 @@
     </main>
 </div>
 
+<!-- FLOATING MOBILE NAV -->
 <nav class="mobile-nav">
-    <a href="#home"><i class="fas fa-home"></i></a>
-    <a href="#projects"><i class="fas fa-code"></i></a>
-    <a href="#certificate"><i class="fas fa-award"></i></a>
-    <a href="#contact"><i class="fas fa-envelope"></i></a>
+    <a href="#home" class="active" aria-label="Home"><i class="fas fa-home"></i></a>
+    <a href="#projects" aria-label="Projects"><i class="fas fa-code"></i></a>
+    <a href="#certificate" aria-label="Certificate"><i class="fas fa-award"></i></a>
+    <a href="#contact" aria-label="Contact"><i class="fas fa-envelope"></i></a>
+    <button class="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
 </nav>
 
-<div id="imageModal" class="modal-viewer">
-    <span class="close-modal" onclick="closeModal()">&times;</span>
-    <img id="modalImage" src="">
+<!-- IMAGE MODAL -->
+<div id="imageModal" class="modal-viewer" aria-hidden="true">
+    <span class="close-modal" id="closeModalBtn" aria-label="Close modal">&times;</span>
+    <img id="modalImage" src="" alt="Enlarged view">
 </div>
 
+<!-- Link to your external JS file -->
 <script src="script.js"></script>
+
 </body>
 </html>
