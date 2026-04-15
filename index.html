@@ -1,227 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="description" content="Mulalo Siaga – Computer Science student, tutor & tech consultant. High-distinction achiever, Java/C++ expert.">
-<title>Mulalo Siaga | Professional Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <meta name="description" content="Mulalo Siaga – Computer Science student, tutor & tech consultant. High-distinction achiever, Java/C++ expert.">
+  <title>Mulalo Siaga | Portfolio</title>
+  
+  <!-- Fonts: elegant sans-serif for body + monospace for code/accents -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  
+  <style>
+    /* ================= MODERN PORTFOLIO WITH ELEGANT TYPOGRAPHY ================= */
+    :root {
+      --bg: #0A0A0A;
+      --surface: #141414;
+      --text-primary: #ECECEC;
+      --text-secondary: #9CA3AF;
+      --accent: #3B82F6;
+      --accent-glow: rgba(59, 130, 246, 0.12);
+      --border: #2A2A2A;
+      --border-light: #1F1F1F;
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
 
-<link rel="stylesheet" href="style.css">
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
+    @media (pointer: fine) {
+      html { cursor: none; }
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text-primary);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    /* refined text styles */
+    p, li, .bio, .about-text p, .service-content p, .project-info p, .cert-card p, .cv-card p {
+      font-weight: 400;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, .section-title, .navbar, .btn, .skill-tag, .type-writer, .greeting, .item-title, .service-price {
+      font-family: 'Space Mono', monospace;
+    }
+
+    /* smoother headings */
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+      color: var(--text-primary);
+    }
+
+    .greeting {
+      font-family: 'Space Mono', monospace;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    .title {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(3rem, 10vw, 5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin: 0.5rem 0;
+      color: white;
+    }
+
+    .tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      letter-spacing: -0.2px;
+    }
+
+    /* ================= CUSTOM CURSOR ================= */
+    .cursor-dot { width: 8px; height: 8px; background: var(--accent); position: fixed; border-radius: 50%; pointer-events: none; z-index: 10000; transform: translate(-50%, -50%); transition: opacity 0.3s; }
+    .cursor-ring { width: 36px; height: 36px; border: 2px solid var(--accent); position: fixed; border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: width 0.3s, height 0.3s, background 0.3s, border-color 0.3s; }
+    .cursor-ring.hover-state { width: 60px; height: 60px; background: var(--accent-glow); border-color: transparent; }
+    @media (pointer: coarse) { .cursor-dot, .cursor-ring { display: none !important; } }
+
+    /* ================= TYPEWRITER ================= */
+    .type-writer-container { height: 2.5rem; margin-bottom: 1rem; }
+    .type-writer {
+      font-family: 'Space Mono', monospace;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-right: 3px solid var(--accent);
+      padding-right: 8px;
+      animation: blink 0.8s infinite;
+    }
+    @keyframes blink { 50% { border-color: transparent; } }
+
+    /* ================= FALLING NAME ANIMATION ================= */
+    .falling-name { display: inline-block; }
+    .falling-letter {
+      display: inline-block;
+      opacity: 0;
+      animation: fallInVerySlow 2.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      white-space: pre;
+    }
+    .falling-letter.space { min-width: 0.5em; }
+    @keyframes fallInVerySlow {
+      0% { opacity: 0; transform: translateY(-150px) rotate(-8deg); }
+      50% { opacity: 0.7; transform: translateY(15px) rotate(2deg); }
+      70% { opacity: 1; transform: translateY(-5px) rotate(-1deg); }
+      85% { transform: translateY(2px) rotate(0.5deg); }
+      100% { opacity: 1; transform: translateY(0) rotate(0); }
+    }
+
+    /* ================= NAVBAR ================= */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      max-width: 1400px;
+      margin: 0 auto;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10,10,10,0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .logo .label { font-size: 1rem; letter-spacing: 1px; font-weight: 700; color: var(--text-primary); }
+    .nav-links { display: flex; list-style: none; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: var(--transition);
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+
+    /* ================= CONTAINER ================= */
+    .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+    /* ================= HERO ================= */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      min-height: 70vh;
+      padding: 2rem 0;
+    }
+    .hero-image-wrapper {
+      position: relative;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+    }
+    .hero-image-wrapper img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); display: block; }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%);
+      padding: 1.5rem;
+    }
+    .hero-overlay .greeting, .hero-overlay .title, .hero-overlay .type-writer { text-shadow: 0 2px 12px rgba(0,0,0,0.6); }
+    .hero-content { max-width: 650px; }
+    .bio {
+      font-size: 1rem;
+      margin: 1.5rem 0 2rem;
+      line-height: 1.75;
+    }
+    .cta-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.8rem 2rem;
+      border-radius: 4px;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+      border: none;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+      transition: left 0.7s;
+    }
+    .btn:hover::before { left: 100%; }
+    .btn-primary { background: var(--accent); color: white; }
+    .btn-primary:hover { background: transparent; color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+    .btn-outline { background: transparent; color: var(--text-primary); box-shadow: inset 0 0 0 1px var(--border); }
+    .btn-outline:hover { box-shadow: inset 0 0 0 1px var(--accent); color: var(--accent); }
+    .btn-small { padding: 0.5rem 1rem; font-size: 0.75rem; background: var(--surface); color: var(--text-primary); border: 1px solid var(--border); }
+    .btn-small:hover { border-color: var(--accent); background: var(--accent-glow); }
+
+    /* ================= ABOUT ================= */
+    .about-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: start; }
+    .about-text p { margin-bottom: 1.2rem; font-size: 0.96rem; }
+    .about-img {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+      aspect-ratio: 3 / 4;
+      max-width: 280px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    .about-img img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+    .about-img:hover img { transform: scale(1.02); }
+
+    /* ================= TIMELINE & CARDS ================= */
+    .timeline-card { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 2rem; }
+    .timeline-item { margin-bottom: 2rem; }
+    .item-meta { font-family: 'Space Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 0.3rem; }
+    .item-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.3rem; }
+    .item-sub { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.8rem; }
+    .timeline-item ul { list-style: none; padding-left: 0; }
+    .timeline-item li { font-size: 0.86rem; margin-bottom: 0.5rem; padding-left: 1.2rem; position: relative; }
+    .timeline-item li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
+
+    /* ================= SKILLS ================= */
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .skill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    .skill-tag i { font-size: 1rem; color: var(--accent); }
+    .skill-tag:hover { border-color: var(--accent); background: var(--accent-glow); transform: translateY(-2px); }
+
+    /* ================= SERVICES ================= */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .service-card { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; transition: var(--transition); }
+    .service-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .service-img { width: 100%; height: 160px; object-fit: cover; border-bottom: 1px solid var(--border); }
+    .service-content { padding: 1.5rem; }
+    .service-content h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.5rem; }
+    .service-price { font-size: 1.2rem; font-weight: 700; color: var(--accent); margin-bottom: 0.8rem; }
+    .service-content p { font-size: 0.85rem; line-height: 1.6; }
+
+    /* ================= PROJECTS ================= */
+    .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .project-card { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; overflow: hidden; cursor: pointer; transition: var(--transition); }
+    .project-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .project-img-wrapper { aspect-ratio: 16 / 9; overflow: hidden; }
+    .project-card img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+    .project-info { padding: 1.2rem; }
+    .project-title { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; font-weight: 700; }
+    .live-badge { background: var(--accent); color: white; padding: 0.2rem 0.5rem; border-radius: 2px; font-size: 0.6rem; font-weight: 400; text-transform: uppercase; }
+    .project-info p { font-size: 0.8rem; margin-bottom: 1rem; }
+    .tech-pill { display: inline-block; background: var(--bg); color: var(--text-secondary); padding: 0.2rem 0.6rem; border-radius: 2px; font-family: 'Space Mono', monospace; font-size: 0.65rem; margin-right: 0.4rem; margin-bottom: 0.3rem; border: 1px solid var(--border); }
+
+    /* ================= CERTIFICATE & CV ================= */
+    .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .cert-card, .cv-card { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 1.5rem; transition: var(--transition); }
+    .cert-card { cursor: pointer; }
+    .cert-card:hover { border-color: var(--accent); }
+    .cert-icon, .cv-icon { font-size: 2rem; color: var(--accent); margin-bottom: 1rem; }
+    .cert-card h3, .cv-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .cert-card p, .cv-card p { font-size: 0.85rem; margin-bottom: 1rem; }
+    .cert-card img { width: 100%; border-radius: 2px; border: 1px solid var(--border); margin-top: 0.5rem; }
+    .view-hint { display: block; margin-top: 1rem; font-family: 'Space Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); }
+    .cv-buttons { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+
+    /* ================= CONTACT ================= */
+    .contact-intro { font-size: 1rem; margin-bottom: 2rem; color: var(--text-secondary); }
+    .contact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 3rem; }
+    .contact-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1.5rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: var(--transition);
+    }
+    .contact-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .contact-card i { font-size: 2rem; margin-bottom: 0.8rem; }
+    .contact-card span { font-family: 'Space Mono', monospace; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.3rem; }
+    .contact-card small { font-size: 0.7rem; color: var(--text-secondary); }
+    .contact-card.whatsapp:hover i { color: #25D366; }
+    .contact-card.email:hover i { color: #EA4335; }
+    .contact-card.linkedin:hover i { color: #0077B5; }
+    .contact-card.github:hover i { color: var(--text-primary); }
+
+    .footer { text-align: center; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .footer p { font-size: 0.8rem; }
+
+    /* MODAL */
+    .modal-viewer { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 9999; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
+    .modal-viewer.open { display: flex; opacity: 1; cursor: pointer; }
+    .modal-viewer img { max-width: 90%; max-height: 85vh; border-radius: 4px; transform: scale(0.95); transition: transform 0.3s ease; cursor: auto; border: 1px solid var(--border); }
+    .modal-viewer.open img { transform: scale(1); }
+    .close-modal { position: absolute; top: 20px; right: 30px; color: white; font-size: 2.5rem; cursor: pointer; font-family: 'Space Mono', monospace; }
+    .close-modal:hover { color: var(--accent); }
+
+    /* MOBILE NAV */
+    .mobile-nav { display: none; position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); background: rgba(20,20,20,0.9); backdrop-filter: blur(16px); padding: 0.6rem 1.5rem; border-radius: 3rem; gap: 1.5rem; border: 1px solid var(--border); z-index: 1000; }
+    .mobile-nav a { color: var(--text-secondary); font-size: 1.2rem; cursor: pointer; transition: var(--transition); display: flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; border-radius: 50%; text-decoration: none; }
+    .mobile-nav a.active { color: white; background: var(--accent); }
+
+    /* REVEAL + STAGGER */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .stagger-item { opacity: 0; transform: translateY(15px); transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+    .stagger-item.visible { opacity: 1; transform: translateY(0); }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .navbar { flex-wrap: wrap; justify-content: center; gap: 1rem; padding: 1rem; }
+      .nav-links { gap: 1rem; }
+      .hero { grid-template-columns: 1fr; gap: 2rem; min-height: auto; }
+      .hero-image-wrapper { max-width: 400px; margin: 0 auto; }
+      .about-grid { grid-template-columns: 1fr; }
+      .services-grid, .projects-grid { grid-template-columns: repeat(2, 1fr); }
+      .cert-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: repeat(2, 1fr); }
+      .mobile-nav { display: flex; }
+      .container { padding-bottom: 5rem; }
+    }
+    @media (max-width: 768px) {
+      .services-grid, .projects-grid { grid-template-columns: 1fr; }
+      .title { font-size: 2.5rem; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .cta-buttons { flex-direction: column; }
+      .btn { width: 100%; justify-content: center; }
+    }
+  </style>
 </head>
 <body>
-
-<div class="ambient-bg">
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-</div>
 
 <div class="cursor-dot"></div>
 <div class="cursor-ring"></div>
 
-<div class="wrapper">
-    <aside class="sidebar">
-        <div>
-            <h2 style="font-weight: 800; letter-spacing: -1px; font-size: 2rem;">M.<span class="text-gradient">SIAGA</span></h2>
-            <p style="color: var(--accent-green); font-size: 0.75rem; font-weight: 800; letter-spacing: 1.5px; margin-top: -5px;">PORTFOLIO</p>
-            <nav class="nav-menu">
-                <li><a href="#home" class="active" aria-label="Home"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="#about" aria-label="About"><i class="fas fa-user"></i> About</a></li>
-                <li><a href="#education" aria-label="Education"><i class="fas fa-graduation-cap"></i> Education</a></li>
-                <li><a href="#experience" aria-label="Experience"><i class="fas fa-briefcase"></i> Experience</a></li>
-                <li><a href="#skills" aria-label="Skills"><i class="fas fa-microchip"></i> Skills</a></li>
-                <li><a href="#services" aria-label="Services"><i class="fas fa-concierge-bell"></i> Services</a></li>
-                <li><a href="#projects" aria-label="Projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                <li><a href="#certificate" aria-label="Certificate"><i class="fas fa-award"></i> Certificate</a></li>
-                <li><a href="#contact" aria-label="Contact"><i class="fas fa-paper-plane"></i> Contact</a></li>
-            </nav>
-        </div>
-        <button class="btn btn-green theme-toggle" style="width: 100%; margin-top: 1rem;" aria-label="Toggle Dark Mode">
-            <i class="fas fa-moon"></i> <span>Dark Mode</span>
-        </button>
-    </aside>
-
-    <main class="main-content">
-        <section id="home" class="section-card hero-box reveal">
-            <div class="welcome-badge"><i class="fas fa-hand-sparkles"></i> Hello! Welcome.</div>
-            <div class="profile-container">
-                <img src="MySelfie.jpeg" alt="Mulalo Siaga" class="viewable-img" data-src="MySelfie.jpeg" onerror="this.src='https://placehold.co/400x400/2563EB/ffffff?text=MS'">
-            </div>
-            <h1 class="hero-title"><span class="text-gradient">Mulalo Siaga</span></h1>
-            <div class="type-writer-container">
-                <span class="type-writer" id="typewriter"></span>
-            </div>
-            <p class="hero-lead"> <strong>Aspiring Software Engineer</strong> and Computer Science student passionate about building efficient systems, solving real-world tech problems, and helping others learn through code.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="#contact" class="btn btn-blue btn-magnetic"><i class="fas fa-link"></i> Let's Connect</a>
-                <a href="#projects" class="btn btn-green btn-magnetic"><i class="fas fa-eye"></i> View Work</a>
-            </div>
-        </section>
-
-        <section id="about" class="section-card reveal">
-            <h2 class="heading"><i class="fas fa-user-astronaut"></i> About Me</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p><strong>I am a second-year Computer Science student at the University of Venda (UNIVEN)</strong> with a deep passion for using technology to solve real-world problems. I go beyond coding—I actively help people fix everyday tech issues, from forgotten passwords and system slowdowns to complex software and hardware challenges.</p>
-                    <p>I also tutor Mathematics (Calculus) and Java programming, breaking down complex concepts into digestible, clear lessons. This experience has drastically strengthened my communication and problem-solving skills.</p>
-                    <p>My core technical strengths lie in Object-Oriented Programming (Java, C++), frontend web development, and Human-Computer Interaction. I thrive in collaborative environments and actively participate in hackathons to build practical solutions under pressure.</p>
-                </div>
-                <div class="about-img">
-                    <img src="AboutMe.jpeg" alt="Mulalo portrait" class="viewable-img" data-src="AboutMe.jpeg" onerror="this.src='https://placehold.co/600x800/1E293B/ffffff?text=About+Me'">
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="section-card reveal">
-            <h2 class="heading"><i class="fas fa-graduation-cap"></i> Education</h2>
-            <div class="timeline-item stagger-container">
-                <img src="Logo.jpeg" style="height: 60px; margin-bottom: 1rem; background: white; padding: 5px; border-radius: 12px; border: 1px solid var(--border);" onerror="this.style.display='none'" alt="University Logo">
-                <div class="item-meta">2025 – Present</div>
-                <h3 class="item-title">BSc Computer Science (2nd Year)</h3>
-                <p style="color: var(--text-secondary); font-weight: 500;">University of Venda</p>
-                <ul style="margin-top: 1rem; color: var(--text-secondary); margin-left: 1.5rem; line-height: 1.8;">
-                    <li class="stagger-item">High-distinction achiever in Mathematics, Programming, Computer Tech, and Communication.</li>
-                    <li class="stagger-item">Participant in the UNIVEN × CSIR Hackathon 2025 – developed an educational access prototype.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="experience" class="section-card reveal">
-            <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
-            <div class="timeline-item stagger-item">
-                <div class="item-meta">2025 - Present</div>
-                <h3 class="item-title">Academic Tutor (Maths & Java)</h3>
-                <ul style="margin-top: 0.5rem; color: var(--text-secondary); margin-left: 1.5rem;">
-                    <li>Tutored 30+ students, resulting in an average grade improvement of 20%.</li>
-                    <li>Designed custom Java OOP exercises boosting one student from 55% to 78% in just 5 weeks.</li>
-                </ul>
-            </div>
-            <div class="timeline-item stagger-item">
-                <div class="item-meta">2025 – Present</div>
-                <h3 class="item-title">Freelance Tech Support Consultant</h3>
-                <ul style="margin-top: 0.5rem; color: var(--text-secondary); margin-left: 1.5rem;">
-                    <li>Successfully diagnosed and repaired 45+ devices across Windows, Linux, and macOS platforms.</li>
-                    <li>Resolved boot errors, executed secure password recoveries, and fixed driver conflicts with a 98% client satisfaction rate.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="skills" class="section-card reveal">
-            <h2 class="heading"><i class="fas fa-layer-group"></i> Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-tag stagger-item"><i class="fab fa-java"></i> Java</div>
-                <div class="skill-tag stagger-item"><i class="devicon-cplusplus-plain"></i> C++</div>
-                <div class="skill-tag stagger-item"><i class="fab fa-js"></i> JavaScript</div>
-                <div class="skill-tag stagger-item"><i class="fab fa-html5"></i> HTML5</div>
-                <div class="skill-tag stagger-item"><i class="fab fa-css3-alt"></i> CSS3</div>
-                <div class="skill-tag stagger-item"><i class="fas fa-database"></i> SQL</div>
-                <div class="skill-tag stagger-item"><i class="fab fa-git-alt"></i> Git/GitHub</div>
-                <div class="skill-tag stagger-item"><i class="fas fa-terminal"></i> Linux CLI</div>
-                <div class="skill-tag stagger-item"><i class="fab fa-react"></i> React JS</div>
-            </div>
-        </section>
-
-        <section id="services" class="section-card reveal">
-            <h2 class="heading"><i class="fas fa-concierge-bell"></i> Services & Pricing</h2>
-            <div class="service-row stagger-item">
-                <img src="Work.jpeg" class="service-img viewable-img" data-src="Work.jpeg" alt="Tutoring Service" onerror="this.src='https://placehold.co/400x300/2563EB/white?text=Tutoring'">
-                <div class="service-info">
-                    <h3><i class="fas fa-chalkboard-user"></i> Academic Tutoring</h3>
-                    <div class="service-price">R150 - R300</div>
-                    <p style="font-weight: 500;">Java OOP & University Calculus</p>
-                    <p class="service-desc">Personalized 1-on-1 lessons designed to target weak points and guarantee grade improvement.</p>
-                </div>
-            </div>
-            <div class="service-row stagger-item">
-                <img src="TechFixing.jpeg" class="service-img viewable-img" data-src="TechFixing.jpeg" alt="Tech Fixing Service" onerror="this.src='https://placehold.co/400x300/10B981/white?text=Tech+Fix'">
-                <div class="service-info">
-                    <h3><i class="fas fa-laptop-code"></i> Device Tech Fix</h3>
-                    <div class="service-price">R150 - R350</div>
-                    <p style="font-weight: 500;">OS Troubleshooting & Optimization</p>
-                    <p class="service-desc">Password resets, driver updates, bootloop fixes, and general performance optimization. Remote or on-site.</p>
-                </div>
-            </div>
-            <div class="service-row stagger-item">
-                <img src="Editing.jpeg" class="service-img viewable-img" data-src="Editing.jpeg" alt="Editing Service" onerror="this.src='https://placehold.co/400x300/18181B/white?text=Editing'">
-                <div class="service-info">
-                    <h3><i class="fas fa-video"></i> Media Editing</h3>
-                    <div class="service-price">R50 - R100</div>
-                    <p style="font-weight: 500;">Photo & Short Video Polish</p>
-                    <p class="service-desc">Clean photo retouching, short-form video editing (TikTok/Reels), and content formatting with quick turnaround.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section-card reveal">
-            <h2 class="heading"><i class="fas fa-code-branch"></i> Featured Projects</h2>
-            <div id="projectsContainer" class="project-grid">
-                </div>
-        </section>
-
-        <section id="certificate" class="section-card reveal">
-            <h2 class="heading"><i class="fas fa-award"></i> Certification</h2>
-            <div class="cert-single viewable-img" data-src="HackCert.jpeg">
-                <i class="fas fa-certificate fa-3x" style="color: var(--accent-blue); margin-bottom: 1rem;"></i>
-                <h3 style="margin: 0.5rem 0; font-size: 1.3rem;">UNIVEN × CSIR Hackathon 2025</h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem;">Participation & Prototype Development</p>
-                <img src="HackCert.jpeg" alt="Hackathon Certificate" onerror="this.src='https://placehold.co/600x400/2563EB/white?text=Certificate'">
-                <p style="margin-top: 1rem; font-size: 0.85rem; font-weight: 600; color: var(--accent-green);"><i class="fas fa-search-plus"></i> Click to enlarge</p>
-            </div>
-        </section>
-
-        <section id="cv" class="section-card reveal">
-            <h2 class="heading"><i class="fas fa-file-alt"></i> Curriculum Vitae</h2>
-            <div class="cv-box">
-                <i class="fas fa-file-pdf" style="font-size: 3.5rem; color: var(--accent-blue);"></i>
-                <h3 style="margin: 1.5rem 0 0.5rem 0;">Download My Professional CV</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 2rem;">Contains my detailed academic record, complete work experience history, and notable achievements.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <button class="btn btn-blue viewable-img btn-magnetic" data-src="MyCV.jpeg"><i class="fas fa-eye"></i> View as Image</button>
-                    <a href="MyCV.jpeg" download="Mulalo_Siaga_CV.jpeg" class="btn btn-green btn-magnetic"><i class="fas fa-image"></i> Get JPEG</a>
-                    <a href="Mulalo_Siaga_CV.pdf" download class="btn btn-green btn-magnetic"><i class="fas fa-download"></i> Get PDF</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section-card reveal">
-            <h2 class="heading"><i class="fas fa-paper-plane"></i> Let's Connect</h2>
-            <div class="contact-channels">
-                <a href="https://wa.me/27617250769" target="_blank" class="channel-link whatsapp stagger-item" aria-label="WhatsApp">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="mailto:mulalosiaga743@gmail.com" class="channel-link email stagger-item" aria-label="Email">
-                    <i class="fas fa-envelope"></i>Mulalosiaga743@gmail.com
-                </a>
-                <a href="https://www.linkedin.com/in/mulalo-siaga-14181b3a0" target="_blank" class="channel-link linkedin stagger-item" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a href="https://github.com/Siaga-h-mulalo" target="_blank" class="channel-link github stagger-item" aria-label="GitHub">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </div>
-        </section>
-    </main>
-</div>
-
-<nav class="mobile-nav">
-    <a href="#home" class="active" aria-label="Home"><i class="fas fa-home"></i></a>
-    <a href="#projects" aria-label="Projects"><i class="fas fa-code"></i></a>
-    <a href="#certificate" aria-label="Certificate"><i class="fas fa-award"></i></a>
-    <a href="#contact" aria-label="Contact"><i class="fas fa-envelope"></i></a>
-    <button class="theme-toggle" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+<nav class="navbar">
+  <div class="logo"><span class="label">Mulalo Siaga</span></div>
+  <ul class="nav-links">
+    <li><a href="#home" class="active">Home</a></li><li><a href="#about">About</a></li><li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li><li><a href="#certificate">Certificate</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
 
-<div id="imageModal" class="modal-viewer" aria-hidden="true">
-    <span class="close-modal" id="closeModalBtn" aria-label="Close modal">&times;</span>
-    <img id="modalImage" src="" alt="Enlarged view">
-</div>
+<main class="container">
+  <header id="home" class="hero reveal">
+    <div class="hero-image-wrapper">
+      <img src="MySelfie.jpeg" alt="Mulalo Siaga" class="viewable-img" data-src="MySelfie.jpeg" onerror="this.src='https://placehold.co/400x400/2563EB/ffffff?text=MS'">
+      <div class="hero-overlay">
+        <p class="greeting">Hello, I'm</p>
+        <h1 class="title falling-name" id="fallingName">Mulalo Siaga</h1>
+        <div class="type-writer-container"><span class="type-writer" id="typewriter"></span></div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <p class="tagline">Building intelligent systems & empowering through code</p>
+      <p class="bio"><strong>Aspiring Software Engineer</strong> and Computer Science student passionate about building efficient systems, solving real-world tech problems, and helping others learn through code.</p>
+      <div class="cta-buttons"><a href="#projects" class="btn btn-primary btn-magnetic">View Projects</a><a href="#contact" class="btn btn-outline btn-magnetic">Connect With Me</a></div>
+    </div>
+  </header>
 
-<script src="script.js"></script>
+  <section id="about" class="section reveal">
+    <h2 class="section-title">About</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p><strong>I’m a second-year Computer Science student at the University of Venda (UNIVEN)</strong> — driven by a passion for elegant code and human-centric technology. Beyond algorithms, I actively help people resolve everyday tech frustrations: forgotten passwords, sluggish systems, software quirks, and hardware hiccups.</p>
+        <p>I also tutor Mathematics (Calculus) and Java programming, turning complex concepts into clear, rewarding lessons. My communication and analytical skills grow with every student I mentor.</p>
+        <p>My core strengths lie in Object-Oriented Programming (Java, C++), modern frontend development, and Human-Computer Interaction. I thrive in collaborative environments and love hackathons — they sharpen my ability to deliver practical solutions under pressure.</p>
+      </div>
+      <div class="about-img"><img src="AboutMe.jpeg" alt="Mulalo portrait" class="viewable-img" data-src="AboutMe.jpeg" onerror="this.src='https://placehold.co/600x800/1E293B/ffffff?text=About+Me'"></div>
+    </div>
+  </section>
 
+  <section id="education" class="section reveal">
+    <h2 class="section-title">Education</h2>
+    <div class="timeline-card"><div class="timeline-item"><img src="Logo.jpeg" style="height: 45px; margin-bottom: 1rem; background: white; padding: 5px; border-radius: 4px;" onerror="this.style.display='none'" alt="Logo"><div class="item-meta">2025 – Present</div><h3 class="item-title">BSc Computer Science (2nd Year)</h3><p class="item-sub">University of Venda</p><ul><li>High-distinction achiever in Mathematics, Programming, Computer Tech, and Communication.</li><li>Participant in UNIVEN × CSIR Hackathon 2025 – developed an educational access prototype.</li></ul></div></div>
+  </section>
+
+  <section id="experience" class="section reveal">
+    <h2 class="section-title">Experience</h2>
+    <div class="timeline-card"><div class="timeline-item"><div class="item-meta">2025 - Present</div><h3 class="item-title">Academic Tutor (Maths & Java)</h3><ul><li>Tutored 30+ students, resulting in an average grade improvement of 20%.</li><li>Designed custom Java OOP exercises boosting one student from 55% to 78% in 5 weeks.</li></ul></div><div class="timeline-item"><div class="item-meta">2025 – Present</div><h3 class="item-title">Freelance Tech Support Consultant</h3><ul><li>Diagnosed and repaired 45+ devices across Windows, Linux, and macOS.</li><li>Resolved boot errors, password recoveries, driver conflicts with 98% satisfaction.</li></ul></div></div>
+  </section>
+
+  <section id="skills" class="section reveal"><h2 class="section-title">Tech Stack</h2><div class="skills-grid"><span class="skill-tag stagger-item"><i class="fab fa-java"></i> Java</span><span class="skill-tag stagger-item"><i class="devicon-cplusplus-plain"></i> C++</span><span class="skill-tag stagger-item"><i class="fab fa-js"></i> JavaScript</span><span class="skill-tag stagger-item"><i class="fab fa-html5"></i> HTML5</span><span class="skill-tag stagger-item"><i class="fab fa-css3-alt"></i> CSS3</span><span class="skill-tag stagger-item"><i class="fas fa-database"></i> SQL</span><span class="skill-tag stagger-item"><i class="fab fa-git-alt"></i> Git/GitHub</span><span class="skill-tag stagger-item"><i class="fas fa-terminal"></i> Linux CLI</span><span class="skill-tag stagger-item"><i class="fab fa-react"></i> React JS</span></div></section>
+
+  <section id="services" class="section reveal"><h2 class="section-title">Services & Pricing</h2><div class="services-grid"><div class="service-card stagger-item"><img src="Work.jpeg" class="service-img viewable-img" data-src="Work.jpeg" alt="Tutoring" onerror="this.src='https://placehold.co/400x300/2563EB/white?text=Tutoring'"><div class="service-content"><h3><i class="fas fa-chalkboard-user"></i> Academic Tutoring</h3><div class="service-price">R150 - R300</div><p>Java OOP & University Calculus – Personalized 1-on-1 lessons designed to target weak points and guarantee grade improvement.</p></div></div><div class="service-card stagger-item"><img src="TechFixing.jpeg" class="service-img viewable-img" data-src="TechFixing.jpeg" alt="Tech Fix" onerror="this.src='https://placehold.co/400x300/10B981/white?text=Tech+Fix'"><div class="service-content"><h3><i class="fas fa-laptop-code"></i> Device Tech Fix</h3><div class="service-price">R150 - R350</div><p>OS Troubleshooting & Optimization – Password resets, driver updates, bootloop fixes, and general performance optimization.</p></div></div><div class="service-card stagger-item"><img src="Editing.jpeg" class="service-img viewable-img" data-src="Editing.jpeg" alt="Editing" onerror="this.src='https://placehold.co/400x300/18181B/white?text=Editing'"><div class="service-content"><h3><i class="fas fa-video"></i> Media Editing</h3><div class="service-price">R50 - R100</div><p>Photo & Short Video Polish – Clean photo retouching, short-form video editing (TikTok/Reels), quick turnaround.</p></div></div></div></section>
+
+  <section id="projects" class="section reveal"><h2 class="section-title">Featured Projects</h2><div id="projectsContainer" class="projects-grid"></div></section>
+
+  <section id="certificate" class="section reveal"><h2 class="section-title">Certifications & CV</h2><div class="cert-grid"><div class="cert-card viewable-img" data-src="HackCert.jpeg"><div class="cert-icon"><i class="fas fa-award"></i></div><h3>UNIVEN × CSIR Hackathon 2025</h3><p>Participation & Prototype Development</p><img src="HackCert.jpeg" alt="Hackathon Certificate" onerror="this.src='https://placehold.co/600x400/2563EB/white?text=Certificate'"><span class="view-hint"><i class="fas fa-search-plus"></i> Click to enlarge</span></div><div class="cv-card"><div class="cv-icon"><i class="fas fa-file-alt"></i></div><h3>Curriculum Vitae</h3><p>Detailed academic record, complete work experience history, and notable achievements.</p><div class="cv-buttons"><button class="btn btn-small viewable-img btn-magnetic" data-src="MyCV.jpeg"><i class="fas fa-eye"></i> View</button><a href="MyCV.jpeg" download="Mulalo_Siaga_CV.jpeg" class="btn btn-small btn-magnetic"><i class="fas fa-image"></i> JPEG</a><a href="Mulalo_Siaga_CV.pdf" download class="btn btn-small btn-magnetic"><i class="fas fa-download"></i> PDF</a></div></div></div></section>
+
+  <section id="contact" class="section reveal"><h2 class="section-title">Let's Connect</h2><p class="contact-intro">Looking forward to hearing from you</p><div class="contact-grid"><a href="https://wa.me/27617250769" target="_blank" class="contact-card whatsapp stagger-item"><i class="fab fa-whatsapp"></i><span>WhatsApp</span><small>+27 61 725 0769</small></a><a href="mailto:mulalosiaga743@gmail.com" class="contact-card email stagger-item"><i class="fas fa-envelope"></i><span>Email</span><small>mulalosiaga743@gmail.com</small></a><a href="https://www.linkedin.com/in/mulalo-siaga-14181b3a0" target="_blank" class="contact-card linkedin stagger-item"><i class="fab fa-linkedin"></i><span>LinkedIn</span><small>Connect with me</small></a><a href="https://github.com/Siaga-h-mulalo" target="_blank" class="contact-card github stagger-item"><i class="fab fa-github"></i><span>GitHub</span><small>View my code</small></a></div><footer class="footer"><p>© 2026 Mulalo Siaga.</p></footer></section>
+</main>
+
+<nav class="mobile-nav"><a href="#home" class="active"><i class="fas fa-home"></i></a><a href="#about"><i class="fas fa-user"></i></a><a href="#projects"><i class="fas fa-code"></i></a><a href="#contact"><i class="fas fa-envelope"></i></a></nav>
+
+<div id="imageModal" class="modal-viewer" aria-hidden="true"><span class="close-modal" id="closeModalBtn">&times;</span><img id="modalImage" src="" alt="Enlarged view"></div>
+
+<script>
+  (function(){
+    const projectsData = [
+      { title: "Kha Ri Gude", desc: "Educational web app promoting literacy through a simple, user-friendly interface.", tech: ["HTML","CSS","JS"], url: "https://25002460.github.io/Up-We-Go-/", img: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=400&fit=crop" },
+      { title: "Dragon PicStore", desc: "Image browsing platform showcasing CSS Grid optimization and layout structuring.", tech: ["HTML","CSS","JS"], url: "https://siaga-h-mulalo.github.io/SMH/", img: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&h=400&fit=crop" },
+      { title: "Dragon Tactics", desc: "Browser-based strategy game with interactive logic and decision-making elements.", tech: ["JS","HTML","CSS"], url: "https://siaga-h-mulalo.github.io/DT/", img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800&h=400&fit=crop" }
+    ];
+    const container = document.getElementById("projectsContainer");
+    if(container) container.innerHTML = projectsData.map(p => `<div class="project-card stagger-item" onclick="window.open('${p.url}', '_blank')"><div class="project-img-wrapper"><img src="${p.img}" alt="${p.title}" loading="lazy"></div><div class="project-info"><div class="project-title"><span>${p.title}</span> <span class="live-badge">Live</span></div><p>${p.desc}</p><div>${p.tech.map(t => `<span class="tech-pill">${t}</span>`).join('')}</div></div></div>`).join("");
+    
+    function initFallingName(){ const el=document.getElementById('fallingName'); if(!el) return; const text=el.textContent.trim(); el.textContent=''; [...text].forEach((ch,i)=>{ const span=document.createElement('span'); span.textContent=ch; span.classList.add('falling-letter'); if(ch===' ') span.classList.add('space'); span.style.animationDelay=`${i*0.12}s`; el.appendChild(span); }); }
+    setTimeout(initFallingName,100);
+    
+    const cursorDot=document.querySelector('.cursor-dot'), cursorRing=document.querySelector('.cursor-ring');
+    let mouseX=0,mouseY=0,ringX=0,ringY=0;
+    if(window.matchMedia("(pointer: fine)").matches){
+      window.addEventListener('mousemove',(e)=>{ mouseX=e.clientX; mouseY=e.clientY; if(cursorDot){ cursorDot.style.left=mouseX+'px'; cursorDot.style.top=mouseY+'px'; } });
+      function renderCursor(){ ringX+=(mouseX-ringX)*0.15; ringY+=(mouseY-ringY)*0.15; if(cursorRing){ cursorRing.style.left=ringX+'px'; cursorRing.style.top=ringY+'px'; } requestAnimationFrame(renderCursor); }
+      requestAnimationFrame(renderCursor);
+      document.querySelectorAll('a, button, .project-card, .viewable-img, .service-card, .contact-card').forEach(el=>{ el.addEventListener('mouseenter',()=>cursorRing?.classList.add('hover-state')); el.addEventListener('mouseleave',()=>cursorRing?.classList.remove('hover-state')); });
+    }
+    document.querySelectorAll('.btn-magnetic').forEach(btn=>{ btn.addEventListener('mousemove',(e)=>{ const rect=btn.getBoundingClientRect(); const x=e.clientX-rect.left-rect.width/2, y=e.clientY-rect.top-rect.height/2; btn.style.transform=`translate(${x*0.3}px, ${y*0.3}px)`; }); btn.addEventListener('mouseleave',()=>btn.style.transform='translate(0px,0px)'); });
+    const roles=["BSc Computer Science Student","Java & C++ Tutor","Tech Consultant","Problem Solver"]; let idx=0,ch=0,isDeleting=false; const typeEl=document.getElementById("typewriter"); function typeLoop(){ if(!typeEl) return; const current=roles[idx]; if(!isDeleting && ch<=current.length){ typeEl.textContent=current.substring(0,ch); ch++; setTimeout(typeLoop,80); } else if(isDeleting && ch>0){ typeEl.textContent=current.substring(0,ch-1); ch--; setTimeout(typeLoop,40); } else { isDeleting=!isDeleting; if(!isDeleting) idx=(idx+1)%roles.length; setTimeout(typeLoop,isDeleting?1500:400); } } typeLoop();
+    const modal=document.getElementById("imageModal"), modalImg=document.getElementById("modalImage"), closeBtn=document.getElementById("closeModalBtn"); function openModal(src){ if(modalImg && modal){ modalImg.src=src; modal.classList.add("open"); modal.setAttribute("aria-hidden","false"); document.body.style.overflow="hidden"; if(cursorRing) cursorRing.style.display="none"; } } function closeModal(){ if(modal){ modal.classList.remove("open"); modal.setAttribute("aria-hidden","true"); document.body.style.overflow="auto"; if(cursorRing && window.matchMedia("(pointer: fine)").matches) cursorRing.style.display="block"; } } document.body.addEventListener("click",(e)=>{ const viewable=e.target.closest('.viewable-img'); if(viewable){ e.stopPropagation(); const src=viewable.getAttribute("data-src") || (viewable.tagName==='IMG'?viewable.src:null); if(src) openModal(src); } }); closeBtn?.addEventListener("click",closeModal); modal?.addEventListener("click",(e)=>{ if(e.target===modal) closeModal(); }); document.addEventListener("keydown",(e)=>{ if(e.key==="Escape") closeModal(); });
+    const reveals=document.querySelectorAll(".reveal"); const observer=new IntersectionObserver((entries)=>{ entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add("visible"); const staggerItems=entry.target.querySelectorAll('.stagger-item'); staggerItems.forEach((item,index)=>{ setTimeout(()=>item.classList.add('visible'),index*80); }); observer.unobserve(entry.target); } }); },{threshold:0.15,rootMargin:"0px 0px -30px 0px"}); reveals.forEach(r=>observer.observe(r));
+    const sections=document.querySelectorAll("section[id], header[id]"); const navLinks=document.querySelectorAll(".nav-links a, .mobile-nav a"); window.addEventListener("scroll",()=>{ let current=""; const scrollY=window.scrollY; sections.forEach(sec=>{ const secTop=sec.offsetTop-150, secHeight=sec.offsetHeight; if(scrollY>=secTop && scrollY<secTop+secHeight) current=sec.getAttribute("id"); }); navLinks.forEach(link=>{ link.classList.remove("active"); if(link.getAttribute("href")===`#${current}`) link.classList.add("active"); }); },{passive:true}); window.dispatchEvent(new Event('scroll'));
+  })();
+</script>
 </body>
 </html>
