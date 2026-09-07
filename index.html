@@ -14,23 +14,24 @@
 
     <style>
         /* ============================================================
-               ROOT & RESET
+               ROOT & RESET — LIGHT THEME
                ============================================================ */
         :root {
-            --bg: #050505;
-            --surface: #0f0f0f;
-            --surface-light: #181818;
-            --text-primary: #f0f0f0;
-            --text-secondary: #a0aab8;
-            --text-muted: #6b7a8a;
-            --accent: #3b82f6;
-            --accent-hover: #60a5fa;
-            --accent-glow: rgba(59, 130, 246, 0.15);
-            --border: #2a2a2a;
-            --border-light: #1f1f1f;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --surface-light: #f1f5f9;
+            --text-primary: #0b1120;
+            --text-secondary: #334155;
+            --text-muted: #64748b;
+            --accent: #2563eb;
+            --accent-hover: #3b82f6;
+            --accent-glow: rgba(37, 99, 235, 0.10);
+            --border: #e2e8f0;
+            --border-light: #f1f5f9;
             --radius: 8px;
             --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.5);
+            --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.10);
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             --font-mono: 'Space Mono', monospace;
         }
@@ -162,7 +163,7 @@
         }
 
         /* ============================================================
-               NAVBAR
+               NAVBAR — LIGHT
                ============================================================ */
         .navbar {
             display: flex;
@@ -174,7 +175,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            background: rgba(5, 5, 5, 0.85);
+            background: rgba(248, 250, 252, 0.88);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             border-bottom: 1px solid var(--border);
@@ -234,7 +235,7 @@
         }
 
         /* ============================================================
-               MOBILE NAV
+               MOBILE NAV — LIGHT
                ============================================================ */
         .mobile-nav {
             display: none;
@@ -242,14 +243,14 @@
             bottom: 1.5rem;
             left: 50%;
             transform: translateX(-50%);
-            background: rgba(15, 15, 15, 0.95);
+            background: rgba(255, 255, 255, 0.96);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             padding: 0.6rem 1.5rem;
             border-radius: 3rem;
             gap: 1.2rem;
             border: 1px solid var(--border);
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
             z-index: 1000;
         }
 
@@ -272,7 +273,7 @@
         }
 
         /* ============================================================
-               HERO
+               HERO — LIGHT
                ============================================================ */
         .hero {
             display: grid;
@@ -291,7 +292,7 @@
             right: -10%;
             width: 60%;
             height: 80%;
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.06) 0%, transparent 70%);
             pointer-events: none;
             z-index: 0;
         }
@@ -312,7 +313,7 @@
             background: var(--accent-glow);
             padding: 0.3rem 1rem;
             border-radius: 30px;
-            border: 1px solid rgba(59, 130, 246, 0.2);
+            border: 1px solid rgba(37, 99, 235, 0.15);
             margin-bottom: 1rem;
         }
 
@@ -322,7 +323,7 @@
             font-weight: 700;
             line-height: 1.05;
             letter-spacing: -2px;
-            color: #fff;
+            color: var(--text-primary);
             margin-bottom: 0.25rem;
         }
 
@@ -384,7 +385,7 @@
         .btn-primary:hover {
             background: var(--accent-hover);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+            box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
         }
 
         .btn-outline {
@@ -430,7 +431,7 @@
             border-radius: 50%;
             overflow: hidden;
             border: 2px solid var(--border);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
         }
 
         .hero-image-wrapper img {
@@ -449,7 +450,7 @@
             position: absolute;
             inset: -12px;
             border-radius: 50%;
-            border: 1px solid rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(37, 99, 235, 0.12);
             animation: spin 30s linear infinite;
             pointer-events: none;
         }
@@ -464,13 +465,13 @@
             position: absolute;
             inset: -24px;
             border-radius: 50%;
-            border: 1px solid rgba(59, 130, 246, 0.06);
+            border: 1px solid rgba(37, 99, 235, 0.05);
             animation: spin 45s linear infinite reverse;
             pointer-events: none;
         }
 
         /* ============================================================
-               ABOUT
+               ABOUT — LIGHT
                ============================================================ */
         .about-grid {
             display: grid;
@@ -531,6 +532,7 @@
             max-width: 340px;
             margin: 0 auto;
             width: 100%;
+            background: var(--surface);
         }
 
         .about-image img {
@@ -545,7 +547,7 @@
         }
 
         /* ============================================================
-               SKILLS
+               SKILLS — LIGHT
                ============================================================ */
         .skills-wrapper {
             display: grid;
@@ -598,7 +600,7 @@
         }
 
         /* ============================================================
-               PROJECTS
+               PROJECTS — LIGHT
                ============================================================ */
         .projects-grid {
             display: grid;
@@ -615,12 +617,13 @@
             cursor: pointer;
             display: flex;
             flex-direction: column;
+            box-shadow: var(--shadow-card);
         }
 
         .project-card:hover {
             border-color: var(--accent);
             transform: translateY(-6px);
-            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+            box-shadow: var(--shadow-hover);
         }
 
         .project-card.featured {
@@ -747,7 +750,7 @@
         }
 
         /* ============================================================
-               EXPERIENCE / JOURNEY
+               EXPERIENCE / JOURNEY — LIGHT
                ============================================================ */
         .journey-timeline {
             display: flex;
@@ -763,10 +766,12 @@
             border: 1px solid var(--border);
             border-radius: var(--radius);
             transition: var(--transition);
+            box-shadow: var(--shadow-card);
         }
 
         .journey-item:hover {
             border-color: var(--accent);
+            box-shadow: var(--shadow-hover);
         }
 
         .journey-icon {
@@ -780,7 +785,7 @@
             justify-content: center;
             color: var(--accent);
             font-size: 1.2rem;
-            border: 1px solid rgba(59, 130, 246, 0.15);
+            border: 1px solid rgba(37, 99, 235, 0.12);
         }
 
         .journey-content h3 {
@@ -805,7 +810,7 @@
         }
 
         /* ============================================================
-               SERVICES
+               SERVICES — LIGHT
                ============================================================ */
         .services-grid {
             display: grid;
@@ -819,12 +824,13 @@
             border-radius: var(--radius);
             overflow: hidden;
             transition: var(--transition);
+            box-shadow: var(--shadow-card);
         }
 
         .service-card:hover {
             border-color: var(--accent);
             transform: translateY(-4px);
-            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+            box-shadow: var(--shadow-hover);
         }
 
         .service-img {
@@ -872,7 +878,7 @@
         }
 
         /* ============================================================
-               CERTIFICATE & CV
+               CERTIFICATE & CV — LIGHT
                ============================================================ */
         .cert-grid {
             display: grid;
@@ -887,10 +893,12 @@
             padding: 1.5rem;
             transition: var(--transition);
             cursor: pointer;
+            box-shadow: var(--shadow-card);
         }
 
         .cert-card:hover {
             border-color: var(--accent);
+            box-shadow: var(--shadow-hover);
         }
 
         .cert-card .icon {
@@ -932,6 +940,7 @@
             border: 1px solid var(--border);
             border-radius: var(--radius);
             padding: 1.5rem;
+            box-shadow: var(--shadow-card);
         }
 
         .cv-card .icon {
@@ -959,7 +968,7 @@
         }
 
         /* ============================================================
-               CONTACT
+               CONTACT — LIGHT
                ============================================================ */
         .contact-grid {
             display: grid;
@@ -980,12 +989,13 @@
             text-decoration: none;
             color: var(--text-primary);
             transition: var(--transition);
+            box-shadow: var(--shadow-card);
         }
 
         .contact-card:hover {
             border-color: var(--accent);
             transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            box-shadow: var(--shadow-hover);
         }
 
         .contact-card i {
@@ -1018,11 +1028,11 @@
             color: #0077b5;
         }
         .contact-card.github:hover i {
-            color: #fff;
+            color: #0b1120;
         }
 
         /* ============================================================
-               FOOTER
+               FOOTER — LIGHT
                ============================================================ */
         .footer {
             text-align: center;
@@ -1054,13 +1064,13 @@
         }
 
         /* ============================================================
-               MODAL
+               MODAL — LIGHT
                ============================================================ */
         .modal-viewer {
             display: none;
             position: fixed;
             inset: 0;
-            background: rgba(0, 0, 0, 0.92);
+            background: rgba(0, 0, 0, 0.88);
             z-index: 9999;
             align-items: center;
             justify-content: center;
@@ -1345,7 +1355,7 @@
 
                 <div class="hero-image">
                     <div class="hero-image-wrapper">
-                        <img src="MySelfie.jpeg" alt="Siaga Mulalo portrait" class="viewable-img" data-src="MySelfie.jpeg" onerror="this.src='https://placehold.co/400x400/1a1a1a/3b82f6?text=SM'" />
+                        <img src="MySelfie.jpeg" alt="Siaga Mulalo portrait" class="viewable-img" data-src="MySelfie.jpeg" onerror="this.src='https://placehold.co/400x400/e2e8f0/2563eb?text=SM'" />
                         <div class="hero-ring"></div>
                         <div class="hero-ring-2"></div>
                     </div>
@@ -1399,7 +1409,7 @@
                 </div>
 
                 <div class="about-image">
-                    <img src="AboutMe.jpeg" alt="Siaga Mulalo" class="viewable-img" data-src="AboutMe.jpeg" onerror="this.src='https://placehold.co/600x800/1a1a1a/3b82f6?text=About+Me'" />
+                    <img src="AboutMe.jpeg" alt="Siaga Mulalo" class="viewable-img" data-src="AboutMe.jpeg" onerror="this.src='https://placehold.co/600x800/e2e8f0/2563eb?text=About+Me'" />
                 </div>
             </div>
         </section>
@@ -1521,7 +1531,7 @@
 
             <div class="services-grid">
                 <div class="service-card stagger-item">
-                    <img src="Work.jpeg" class="service-img viewable-img" data-src="Work.jpeg" alt="Tutoring" onerror="this.src='https://placehold.co/400x200/1a1a1a/3b82f6?text=Tutoring'" />
+                    <img src="Work.jpeg" class="service-img viewable-img" data-src="Work.jpeg" alt="Tutoring" onerror="this.src='https://placehold.co/400x200/e2e8f0/2563eb?text=Tutoring'" />
                     <div class="service-body">
                         <h3><i class="fas fa-chalkboard-user"></i> Academic Tutoring</h3>
                         <div class="service-price">R150 – R300</div>
@@ -1530,7 +1540,7 @@
                 </div>
 
                 <div class="service-card stagger-item">
-                    <img src="TechFixing.jpeg" class="service-img viewable-img" data-src="TechFixing.jpeg" alt="Tech Fix" onerror="this.src='https://placehold.co/400x200/1a1a1a/3b82f6?text=Tech+Fix'" />
+                    <img src="TechFixing.jpeg" class="service-img viewable-img" data-src="TechFixing.jpeg" alt="Tech Fix" onerror="this.src='https://placehold.co/400x200/e2e8f0/2563eb?text=Tech+Fix'" />
                     <div class="service-body">
                         <h3><i class="fas fa-laptop-code"></i> Device Tech Fix</h3>
                         <div class="service-price">R150 – R350</div>
@@ -1539,7 +1549,7 @@
                 </div>
 
                 <div class="service-card stagger-item">
-                    <img src="Editing.jpeg" class="service-img viewable-img" data-src="Editing.jpeg" alt="Editing" onerror="this.src='https://placehold.co/400x200/1a1a1a/3b82f6?text=Editing'" />
+                    <img src="Editing.jpeg" class="service-img viewable-img" data-src="Editing.jpeg" alt="Editing" onerror="this.src='https://placehold.co/400x200/e2e8f0/2563eb?text=Editing'" />
                     <div class="service-body">
                         <h3><i class="fas fa-video"></i> Media Editing</h3>
                         <div class="service-price">R50 – R100</div>
@@ -1562,7 +1572,7 @@
                     <div class="icon"><i class="fas fa-award"></i></div>
                     <h3>UNIVEN × CSIR Hackathon 2025</h3>
                     <p>Participation &amp; Prototype Development</p>
-                    <img src="HackCert.jpeg" alt="Hackathon Certificate" onerror="this.src='https://placehold.co/600x400/1a1a1a/3b82f6?text=Certificate'" />
+                    <img src="HackCert.jpeg" alt="Hackathon Certificate" onerror="this.src='https://placehold.co/600x400/e2e8f0/2563eb?text=Certificate'" />
                     <span class="view-hint"><i class="fas fa-search-plus"></i> Click to enlarge</span>
                 </div>
 
@@ -1692,7 +1702,6 @@
 
             const container = document.getElementById("projectsContainer");
             if (container) {
-                // Sort: featured first, then by title
                 const sorted = [...projectsData].sort((a, b) => (a.featured ? -1 : 1) - (b.featured ? -1 : 1));
                 container.innerHTML = sorted.map(p => `
                         <div class="project-card ${p.featured ? 'featured' : ''} stagger-item">
